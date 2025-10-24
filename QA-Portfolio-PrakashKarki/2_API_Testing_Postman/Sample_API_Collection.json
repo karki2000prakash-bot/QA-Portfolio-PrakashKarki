@@ -1,0 +1,26 @@
+{
+    "info": {
+        "name": "Sample API Testing",
+        "_postman_id": "12345",
+        "schema": "https://schema.getpostman.com"
+    },
+    "item": [
+        {
+            "name": "GET Users",
+            "request": {
+                "method": "GET",
+                "url": "https://jsonplaceholder.typicode.com/users"
+            },
+            "event": [
+                {
+                    "listen": "test",
+                    "script": {
+                        "exec": [
+                            "pm.test('Status code is 200', function () { pm.response.to.have.status(200); });"
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}
